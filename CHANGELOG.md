@@ -35,6 +35,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated the "Professional Makeup Artistry & Airbrushing" course image on the Academy page to use the local `academy_3.jpg` asset.
 - Updated the Gallery page hero background (Portfolio Show / Our Creative Gallery) to use the local `gallery.jpg` asset with a premium dark gradient overlay.
 - Updated the Gallery page to feature curated local assets for Hair Design (`haircut.jpg`, `haircut_1.jpg`, `haircut_2.jpg`), Skincare (`skincare1.jpg`, `skincare2.jpg`, `skincare3.jpg`), and Makeup Artistry (`makeup1.jpg`, `makeup2.jpg`, `makeup3.jpg`).
+- Updated the Home page hero background to use the local `home.jpeg` asset, preserving the cinematic dark gradient, parallax scroll animations, and fluid typography.
 - Updated the Contact page hero background (Get In Touch / Connect With Us) to use the local `contact.jpg` asset with a premium dark gradient overlay.
 - Updated the site footer to display the NRAVIXA copyright and link (`https://nravixa.vercel.app/`).
 - Created `.gitignore` file and updated the Vercel build script (`npx tsc`) in `package.json` to fix "Permission denied" deployment errors on Linux build machines.

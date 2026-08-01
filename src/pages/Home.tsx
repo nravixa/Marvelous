@@ -9,7 +9,7 @@ import { PinnedHorizontalScroll } from '../components/animations/PinnedHorizonta
 import { PageTransition } from '../components/animations/PageTransition';
 import { CinematicVideo } from '../components/ui/CinematicVideo';
 import { LuxuryImage } from '../components/ui/LuxuryImage';
-import heroVideo from '@/components/videos/hero_section_vc.mp4';
+import heroImage from '@/components/images/home.jpeg';
 import home1Image from '@/components/images/home_1.jpeg';
 import home2Image from '@/components/images/home_2.jpeg';
 import { TestimonialCarousel } from '../components/ui/TestimonialCarousel';
@@ -58,16 +58,12 @@ export const Home: React.FC = () => {
           ref={parallaxBgRef}
           className="absolute inset-0 w-full h-[120%] -top-[10%] opacity-80 scale-105 will-change-transform z-0"
         >
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
+          <img
+            src={heroImage}
+            alt="Marvelous Salon Hero Background"
             className="absolute inset-0 h-full w-full object-cover"
-          >
-            <source src={heroVideo} type="video/mp4" />
-          </video>
+            fetchPriority="high"
+          />
         </div>
 
         {/* Dark Gradient Overlay for text readability */}
