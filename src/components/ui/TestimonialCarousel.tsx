@@ -46,7 +46,7 @@ export const TestimonialCarousel: React.FC = () => {
   };
 
   // Drag/Swipe handler for mobile touch gestures
-  const handleDragEnd = (event: any, info: any) => {
+  const handleDragEnd = (_event: any, info: any) => {
     const swipeThreshold = 50;
     if (info.offset.x < -swipeThreshold) {
       handleNext();
@@ -55,10 +55,6 @@ export const TestimonialCarousel: React.FC = () => {
     }
   };
 
-  const visibleTestimonials = testimonialsData.slice(
-    currentIndex,
-    currentIndex + itemsPerPage
-  );
 
   // If slicing wraps around (not strictly necessary but keeps layout full if current index shifts)
   const paddedIndex = Math.min(currentIndex, maxIndex);

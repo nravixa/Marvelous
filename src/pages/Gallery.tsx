@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { galleryData, GalleryItem } from '../data/galleryData';
 import { FadeIn } from '../components/animations/FadeIn';
 import { TiltCard } from '../components/animations/TiltCard';
-import { CinematicVideo } from '../components/ui/CinematicVideo';
+
 import { LuxuryImage } from '../components/ui/LuxuryImage';
 import { PageTransition } from '../components/animations/PageTransition';
 import galleryHeroImage from '../components/images/gallery.jpg';
