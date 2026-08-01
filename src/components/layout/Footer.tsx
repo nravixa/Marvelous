@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Twitter, Mail, Phone, MapPin } from 'lucide-react';
+import logoImage from '../images/logo.png';
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -13,7 +14,7 @@ export const Footer: React.FC = () => {
         {/* Column 1: Brand Info */}
         <div className="flex flex-col gap-6">
           <Link to="/" className="flex items-center gap-3 focus:outline-none">
-            <img src="/src/assets/logo.svg" alt="Marvelous Unisex Salon Logo" className="h-10 w-10" />
+            <img src={logoImage} alt="Marvelous Unisex Salon Logo" className="h-10 w-10 object-contain" />
             <span className="font-serif text-lg font-bold uppercase tracking-[0.2em] text-cream">
               MARVELOUS
             </span>

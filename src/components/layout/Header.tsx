@@ -4,6 +4,7 @@ import { ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'framer-motion';
 import { Button } from '../ui/Button';
 import { globalLenis } from '../../hooks/useLenis';
+import logoImage from '../images/logo.png';
 
 export const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -86,7 +87,7 @@ export const Header: React.FC = () => {
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3 group focus:outline-none" aria-label="Marvelous Home">
               <img
-                src="/src/assets/logo.svg"
+                src={logoImage}
                 alt="Marvelous Unisex Salon Logo"
                 className="h-8 w-8 md:h-10 md:w-10 transition-transform duration-500 group-hover:rotate-12"
               />
