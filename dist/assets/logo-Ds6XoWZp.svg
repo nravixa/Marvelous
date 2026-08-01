@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <!-- Background Shield or Circle (Optional, empty for transparency) -->
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F4E0A5" />
+      <stop offset="50%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#AA820A" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Outer Decorative Ring -->
+  <circle cx="250" cy="250" r="230" fill="none" stroke="url(#goldGrad)" stroke-width="2" stroke-dasharray="10 5" opacity="0.6" />
+  <circle cx="250" cy="250" r="220" fill="none" stroke="url(#goldGrad)" stroke-width="1" />
+  
+  <!-- Monogram Logo M & S & A -->
+  <g transform="translate(0, 0)">
+    <!-- Elegant Stylized Letter M -->
+    <path d="M 120 340 L 120 160 C 120 160, 185 300, 250 300 C 315 300, 380 160, 380 160 L 380 340" 
+          fill="none" stroke="url(#goldGrad)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- Stylized inner Letter S intersecting -->
+    <path d="M 180 220 Q 250 140 320 220 T 180 280 Q 250 360 320 280" 
+          fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.8" />
+  </g>
+
+  <!-- Typography underneath -->
+  <text x="250" y="420" font-family="'Cormorant Garamond', 'serif'" font-size="28" font-weight="600" fill="url(#goldGrad)" text-anchor="middle" letter-spacing="0.25em">MARVELOUS</text>
+  <text x="250" y="450" font-family="'Inter', sans-serif" font-size="12" font-weight="300" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.4em" opacity="0.8">SALON &amp; ACADEMY</text>
+</svg>
