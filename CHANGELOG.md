@@ -37,6 +37,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated the Gallery page to feature curated local assets for Hair Design (`haircut.jpg`, `haircut_1.jpg`, `haircut_2.jpg`), Skincare (`skincare1.jpg`, `skincare2.jpg`, `skincare3.jpg`), and Makeup Artistry (`makeup1.jpg`, `makeup2.jpg`, `makeup3.jpg`).
 - Updated the Contact page hero background (Get In Touch / Connect With Us) to use the local `contact.jpg` asset with a premium dark gradient overlay.
 - Updated the site footer to display the NRAVIXA copyright and link (`https://nravixa.vercel.app/`).
+- Created `.gitignore` file and updated the Vercel build script (`npx tsc`) in `package.json` to fix "Permission denied" deployment errors on Linux build machines.
 - Removed the "Academy Projects" section and filter from the Gallery page to streamline the visual portfolio.
 - Implemented a full-screen mobile menu overlay with staggered luxury entrance animations and custom premium bezier easing.
 - Created `TestimonialCard` and `TestimonialCarousel` components to render real customer reviews (Harshad Kamble, Shekhar Lokhande, Suraj Patil, Dheeraj Kamble, Preeti Wagh) with responsive grid layouts, swipe support, keyboard accessibility, and text expansions.
