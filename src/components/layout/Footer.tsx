@@ -1,23 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram, Twitter, Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Facebook, Instagram, Twitter, Mail, Phone, MapPin } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    alert('Thank you for subscribing to our luxury newsletter!');
-  };
+
 
   return (
     <footer className="bg-obsidian-dark border-t border-white/5 pt-20 pb-10">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
         {/* Column 1: Brand Info */}
         <div className="flex flex-col gap-6">
           <Link to="/" className="flex items-center gap-3 focus:outline-none">
             <img src="/src/assets/logo.svg" alt="Marvelous Unisex Salon Logo" className="h-10 w-10" />
-            <span className="font-serif text-lg font-semibold uppercase tracking-[0.2em] text-cream">
+            <span className="font-serif text-lg font-bold uppercase tracking-[0.2em] text-cream">
               MARVELOUS
             </span>
           </Link>
@@ -72,28 +69,6 @@ export const Footer: React.FC = () => {
           </ul>
         </div>
 
-        {/* Column 4: Newsletter */}
-        <div className="flex flex-col gap-4">
-          <h4 className="font-serif text-lg font-medium text-gold tracking-wide">Newsletter</h4>
-          <p className="text-sm text-cream/60 leading-relaxed font-light">
-            Subscribe to receive luxury trend reports, beauty advice, and course updates.
-          </p>
-          <form onSubmit={handleSubscribe} className="relative mt-2">
-            <input
-              type="email"
-              required
-              placeholder="Your email address"
-              className="w-full bg-obsidian-charcoal text-cream text-sm px-4 py-3 border border-white/10 focus:border-gold/50 focus:ring-0 rounded-none transition-all outline-none pr-12 font-light"
-            />
-            <button
-              type="submit"
-              className="absolute right-0 top-0 bottom-0 px-4 text-gold hover:text-white transition-colors duration-300"
-              aria-label="Subscribe"
-            >
-              <Send className="w-4 h-4" />
-            </button>
-          </form>
-        </div>
       </div>
 
       {/* Copyright Bar */}

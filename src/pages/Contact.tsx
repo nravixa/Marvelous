@@ -5,6 +5,7 @@ import { Button } from '../components/ui/Button';
 import { FadeIn } from '../components/animations/FadeIn';
 import { PageTransition } from '../components/animations/PageTransition';
 import contactHeroImage from '../components/images/contact.jpg';
+import { generateWhatsAppLink } from '../utils/whatsapp';
 
 interface ContactFormData {
   name: string;
@@ -20,7 +21,13 @@ export const Contact: React.FC = () => {
   const { register, handleSubmit, reset } = useForm<ContactFormData>();
 
   const onSubmit = (data: ContactFormData) => {
-    console.info('Contact form submitted:', data);
+    const url = generateWhatsAppLink('New Contact Inquiry', {
+      Name: data.name,
+      Email: data.email,
+      Subject: data.subject,
+      Message: data.message
+    });
+    window.open(url, '_blank');
     setIsSubmitted(true);
     reset();
     setTimeout(() => setIsSubmitted(false), 5000);

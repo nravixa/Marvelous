@@ -7,6 +7,7 @@ import { FadeIn } from '../components/animations/FadeIn';
 import { PageTransition } from '../components/animations/PageTransition';
 
 import academyHeroImage from '../components/images/academy.jpg';
+import { generateWhatsAppLink } from '../utils/whatsapp';
 
 interface InquiryFormData {
   name: string;
@@ -29,7 +30,15 @@ export const Academy: React.FC = () => {
   });
 
   const onSubmit = (data: InquiryFormData) => {
-    console.info('Academy Inquiry submitted:', data);
+    const url = generateWhatsAppLink('New Academy Inquiry', {
+      Name: data.name,
+      Phone: data.phone,
+      Email: data.email,
+      Course: data.course,
+      Experience: data.experience,
+      Statement: data.statement
+    });
+    window.open(url, '_blank');
     setIsSubmitted(true);
     reset();
     setTimeout(() => setIsSubmitted(false), 5000);

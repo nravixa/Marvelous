@@ -88,9 +88,9 @@ export const Header: React.FC = () => {
               <img
                 src="/src/assets/logo.svg"
                 alt="Marvelous Unisex Salon Logo"
-                className="h-9 w-9 transition-transform duration-500 group-hover:rotate-12"
+                className="h-8 w-8 md:h-10 md:w-10 transition-transform duration-500 group-hover:rotate-12"
               />
-              <span className="font-serif text-base md:text-lg font-medium uppercase tracking-[0.25em] text-cream group-hover:text-gold transition-colors duration-300">
+              <span className="font-serif text-base md:text-lg font-bold uppercase tracking-[0.25em] text-cream group-hover:text-gold transition-colors duration-300">
                 MARVELOUS
               </span>
             </Link>
@@ -164,7 +164,7 @@ export const Header: React.FC = () => {
             className="fixed inset-0 z-40 bg-obsidian-dark/98 backdrop-blur-2xl flex flex-col justify-between px-8 py-20 h-[100dvh] w-screen overflow-hidden"
           >
             {/* Staggered Navigation Links */}
-            <nav className="flex flex-col gap-6 text-left mt-16 max-w-md mx-auto w-full">
+            <nav className="flex flex-col gap-8 text-left mt-16 max-w-md mx-auto w-full">
               {navLinks.map((link, idx) => (
                 <motion.div
                   initial={{ opacity: 0, x: -30 }}
@@ -192,7 +192,7 @@ export const Header: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 30 }}
               transition={{ delay: 0.4, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="w-full max-w-md mx-auto flex flex-col gap-4 text-center items-center pb-8"
+              className="w-full max-w-md mx-auto flex flex-col gap-6 text-center items-center mt-auto pb-8"
             >
               <Link to="/services" className="w-full" onClick={() => setIsOpen(false)}>
                 <Button variant="primary" className="w-full" magnetic={false}>

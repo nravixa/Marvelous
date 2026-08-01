@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Sparkles, GraduationCap, Scissors } from 'lucide-react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { motion } from 'framer-motion';
 import { Button } from '../components/ui/Button';
 import { FadeIn } from '../components/animations/FadeIn';
 import { PinnedHorizontalScroll } from '../components/animations/PinnedHorizontalScroll';
@@ -58,7 +59,10 @@ export const Home: React.FC = () => {
           ref={parallaxBgRef}
           className="absolute inset-0 w-full h-[120%] -top-[10%] opacity-80 scale-105 will-change-transform z-0"
         >
-          <img
+          <motion.img
+            initial={{ scale: 1.15, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 1.5, ease: 'easeOut' }}
             src={heroImage}
             alt="Marvelous Salon Hero Background"
             className="absolute inset-0 h-full w-full object-cover"

@@ -11,6 +11,7 @@ import { LuminousCard } from '../components/ui/LuminousCard';
 import { LuxuryImage } from '../components/ui/LuxuryImage';
 import { globalLenis } from '../hooks/useLenis';
 import serviceBannerImage from '../components/images/service.jpg';
+import { generateWhatsAppLink } from '../utils/whatsapp';
 
 interface BookingFormData {
   name: string;
@@ -51,7 +52,17 @@ export const Services: React.FC = () => {
   const availableServices = servicesData.find(cat => cat.id === selectedCategory)?.items || [];
 
   const onSubmit = (data: BookingFormData) => {
-    console.info('Booking request submitted:', data);
+    const url = generateWhatsAppLink('New Appointment Request', {
+      Name: data.name,
+      Phone: data.phone,
+      Email: data.email,
+      Category: servicesData.find(cat => cat.id === data.category)?.name || data.category,
+      Service: data.service,
+      'Preferred Date': data.date,
+      'Preferred Time': data.time,
+      Message: data.notes
+    });
+    window.open(url, '_blank');
     setIsSubmitted(true);
     reset();
     setTimeout(() => setIsSubmitted(false), 5000);
