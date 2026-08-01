@@ -5,7 +5,7 @@ import { coursesData } from '../data/coursesData';
 import { Button } from '../components/ui/Button';
 import { FadeIn } from '../components/animations/FadeIn';
 import { PageTransition } from '../components/animations/PageTransition';
-import { CinematicVideo } from '../components/ui/CinematicVideo';
+
 import academyHeroImage from '../components/images/academy.jpg';
 
 interface InquiryFormData {
@@ -29,7 +29,7 @@ export const Academy: React.FC = () => {
   });
 
   const onSubmit = (data: InquiryFormData) => {
-    console.log('Academy Inquiry submitted:', data);
+    console.info('Academy Inquiry submitted:', data);
     setIsSubmitted(true);
     reset();
     setTimeout(() => setIsSubmitted(false), 5000);

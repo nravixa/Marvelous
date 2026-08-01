@@ -51,7 +51,7 @@ export const Services: React.FC = () => {
   const availableServices = servicesData.find(cat => cat.id === selectedCategory)?.items || [];
 
   const onSubmit = (data: BookingFormData) => {
-    console.log('Booking request submitted:', data);
+    console.info('Booking request submitted:', data);
     setIsSubmitted(true);
     reset();
     setTimeout(() => setIsSubmitted(false), 5000);

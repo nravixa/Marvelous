@@ -20,7 +20,7 @@ export const Contact: React.FC = () => {
   const { register, handleSubmit, reset } = useForm<ContactFormData>();
 
   const onSubmit = (data: ContactFormData) => {
-    console.log('Contact form submitted:', data);
+    console.info('Contact form submitted:', data);
     setIsSubmitted(true);
     reset();
     setTimeout(() => setIsSubmitted(false), 5000);
